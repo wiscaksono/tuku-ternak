@@ -1,11 +1,11 @@
-import { Text, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import RootNavigator from "./src/navigation";
 
 export default function App() {
   return (
-    <View>
-      <Text className="text-red-500">
-        Open up App.tsx to start working on your app!
-      </Text>
-    </View>
+    <>
+      <RootNavigator />
+      <StatusBar style="inverted" />
+    </>
   );
 }
