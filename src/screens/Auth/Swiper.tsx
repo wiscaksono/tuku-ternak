@@ -1,11 +1,9 @@
-import { useState } from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  TouchableOpacity,
-  Image,
-} from "react-native";
+import { useState, useEffect } from "react";
+import { View, Text, TouchableOpacity, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { SafeAreaView } from "react-native-safe-area-context";
+
+import type { AuthScreenNavigationProp } from "../../types/navigation/auth";
 
 const data = [
   {
@@ -30,6 +28,18 @@ const data = [
 
 export default function Swiper() {
   const [index, setIndex] = useState(0);
+  const { navigate } = useNavigation<AuthScreenNavigationProp>();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => {
+        const newIndex = prevIndex + 1;
+        return newIndex === data.length ? prevIndex : newIndex;
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <SafeAreaView className="mx-7 items-center justify-between flex-1">
@@ -52,16 +62,25 @@ export default function Swiper() {
         </View>
       </View>
 
-      <View className="flex-row gap-x-2">
-        {data.map((_, i) => (
-          <View
-            key={i}
-            className={`w-7 h-1 rounded-full ${
-              i === index ? "bg-primary" : "bg-primary/20"
-            }`}
-            onTouchStart={() => setIndex(i)}
-          />
-        ))}
+      <View className="flex-row gap-x-2 h-10 mb-5">
+        {index !== data.length - 1 ? (
+          data.map((_, i) => (
+            <View
+              key={i}
+              className={`w-7 h-1 rounded-full ${
+                i === index ? "bg-primary" : "bg-primary/20"
+              }`}
+              onTouchStart={() => setIndex(i)}
+            />
+          ))
+        ) : (
+          <TouchableOpacity
+            className="bg-primary w-full items-center justify-center rounded"
+            onPress={() => navigate("Options")}
+          >
+            <Text className="text-white font-medium">Mulai Sekarang</Text>
+          </TouchableOpacity>
+        )}
       </View>
     </SafeAreaView>
   );

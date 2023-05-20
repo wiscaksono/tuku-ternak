@@ -2,11 +2,13 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 
 import BottomTabs from "./Tabs";
+import AuthStack from "./AuthStack";
 
 const RootNavigator = () => {
+  const isLoggedIn = false;
   return (
     <NavigationContainer>
-      <BottomTabs />
+      {isLoggedIn ? <BottomTabs /> : <AuthStack />}
     </NavigationContainer>
   );
 };
