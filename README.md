@@ -1,36 +1,64 @@
-# TypeScript Example
+# Aplication TUKU TERNAK
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  <!-- Web -->
-  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-</p>
+Tuku Ternak is E-Commerce Sale and Purchase of Livestock, Livestock Medicine, Animal Feed, and Equipment (accessories) Livestock, the application helps sellers find customers.
 
-```sh
-npx create-react-native-app -t with-typescript
+## Figma Design
+
+I used [Figma Tool](https://www.figma.com/file/pED21VlBNzvdpSvTSkQQQw/PROJECT-TukuTernak?node-id=0%3A1) to create a UI and UX design for this Tuku Ternak application.
+
+- [Design Tuku Ternak](https://www.figma.com/file/pED21VlBNzvdpSvTSkQQQw/PROJECT-TukuTernak?node-id=0%3A1)
+
+## Getting Started
+
+For help getting started with React Native, view the
+[documentation](https://reactnative.dev/).
+
+**Step 1:**
+
+Clone or download this repo by using the code below:
+
+```
+git clone https://github.com/wiscaksono/tuku-ternak
 ```
 
-TypeScript is a superset of JavaScript which gives you static types and powerful tooling in Visual Studio Code including autocompletion and useful inline warnings for type errors.
+**Step 2:**
 
-## 🚀 How to use
+Go to project root and execute the following command in console to get the required dependencies:
 
-#### Creating a new project
+```
+yarn
+```
 
-- Install the CLI: `npm i -g expo-cli`
-- Create a project: `npx create-react-native-app -t with-typescript`
-- `cd` into the project
+**Step 3:**
 
-### Adding TypeScript to existing projects
+Go to project root and execute the following command in console to get the required dependencies:
 
-- Create a blank TypeScript config: `touch tsconfig.json`
-- Run `yarn start` or `npm run start` to automatically configure TypeScript
-- Rename files to TypeScript, `.tsx` for React components and `.ts` for plain typescript files
+```
+yarn start
+```
 
-> 💡 You can disable the TypeScript setup in Expo CLI with the environment variable `EXPO_NO_TYPESCRIPT_SETUP=1 expo start`
+## Features :
 
-## 📝 Notes
+- Splash Screen
+- Swipper Screen
+- Login Home Screen
+- Sign In Screen
+- Sign Up Screen
+- Home Screen
+- Detail Livestock Screen
+- Responsive Screen (HOT)
+- Localization with I10n (HOT)
+- Firebase Storage (HOT)
+- Management Routing (HOT)
+- Bloc (State Management) (HOT)
+- Connectivity with Bloc (HOT)
+- Validation with Bloc (HOT)
+- Api Http + Dio Request with Bloc (HOT)
+- Theme Data with Bloc (HOT)
 
-- [Expo TypeScript guide](https://docs.expo.dev/versions/latest/guides/typescript/)
+### Up-Coming Features :
+
+- List Livestock Screen
+- Localization with local Json
+- Json Serialization
+- Logging (Debuging)
