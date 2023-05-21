@@ -8,6 +8,7 @@ import Swiper from "../screens/Auth/Swiper";
 import Options from "../screens/Auth/Options";
 import Login from "../screens/Auth/Login";
 import Register from "../screens/Auth/Register";
+import Verification from "../screens/Auth/Verification";
 
 const AuthNavigator = createNativeStackNavigator<AuthStackNavigatorParamList>();
 
@@ -51,6 +52,22 @@ const AuthStack = () => {
       <AuthNavigator.Screen
         name="Register"
         component={Register}
+        options={{
+          headerTitle: "",
+          headerLeft: () => (
+            <Ionicons
+              name="arrow-back"
+              size={24}
+              color="#485167"
+              onPress={() => goBack()}
+            />
+          ),
+        }}
+      />
+
+      <AuthNavigator.Screen
+        name="Verification"
+        component={Verification}
         options={{
           headerTitle: "",
           headerLeft: () => (

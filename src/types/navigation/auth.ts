@@ -5,6 +5,7 @@ export type AuthStackNavigatorParamList = {
   Options: undefined;
   Login: undefined;
   Register: undefined;
+  Verification: undefined;
 };
 
 export type AuthScreenNavigationProp =
